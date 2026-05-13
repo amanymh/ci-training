@@ -24,9 +24,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./app
 
       - name: Build the app
         run: npm run build
+        working-directory: ./app
 
   test:
     name: Test
@@ -43,6 +45,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./app
 
       - name: Run tests
         run: npm test -- --watchAll=false
+        working-directory: ./app
